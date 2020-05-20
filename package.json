@@ -1,0 +1,23 @@
+{
+  "name": "ML-layout-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ananoganog/ML-layout-exercise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ananoganog/ML-layout-exercise/issues"
+  },
+  "homepage": "https://github.com/ananoganog/ML-layout-exercise#readme",
+  "devDependencies": {
+    "sass": "^1.26.5"
+  }
+}
