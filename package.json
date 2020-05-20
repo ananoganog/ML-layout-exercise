@@ -1,7 +1,7 @@
 {
   "name": "ML-layout-exercise",
   "version": "1.0.0",
-  "description": "",
+  "description": "# Module Layout exercises",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

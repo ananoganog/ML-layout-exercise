@@ -1,0 +1,46 @@
+$color1base: #ff0000;
+$color2base: #00ff00;
+$color3base: #0000ff;
+
+@mixin palete($mainColor, $numberItems: 1) {
+  $centerItem: ceil($numberItems / 2);
+  @for $item from 1 through $numberItems {
+    @if ($item < $centerItem) {
+      div:nth-child(#{$item}) {
+        background-color: darken($mainColor, 0% + (($centerItem - $item) * 10));
+      }
+    } @else if ($item > $centerItem) {
+      div:nth-child(#{$item}) {
+        background-color: lighten($mainColor, 0% + (($item - $centerItem) * 10));
+      }
+    } @else if ($item == $centerItem) {
+      div:nth-child(#{$item}) {
+        background-color: $mainColor;
+      }
+    }
+  }
+}
+[class^="container-"] {
+  display: block;
+  clear: both;
+  div {
+    color: white;
+    border: 2px solid white;
+    min-height: 15px;
+    min-width: 80px;
+    padding: 60px 0;
+    text-align: center;
+    float: left;
+    border-radius: 8px;
+  }
+  @include palete($color1base, 9);
+}
+.container-1 {
+  @include palete($color1base, 9);
+}
+.container-2 {
+  @include palete($color2base, 9);
+}
+.container-3 {
+  @include palete($color3base, 9);
+}
