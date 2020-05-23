@@ -1,0 +1,42 @@
+$navbarItemColor: #1b7386;
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.header {
+  font-size: 1.2em;
+  margin: 5px 0;
+  text-transform: capitalize;
+  div {
+    line-height: 35px;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: $navbarItemColor;
+  div {
+    color: white;
+    text-transform: capitalize;
+    background-color: $navbarItemColor;
+    padding: 10px;
+    &:hover {
+      background-color: darken($navbarItemColor, 10);
+    }
+  }
+}
+
+@media (max-width: 489px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    div {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+}
